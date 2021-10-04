@@ -1,0 +1,6 @@
+framework module Pods_MVCStore {
+  umbrella header "Pods-MVCStore-umbrella.h"
+
+  export *
+  module * { export * }
+}

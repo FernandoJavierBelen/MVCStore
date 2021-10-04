@@ -1,0 +1,6 @@
+framework module Pods_MVCStoreTests {
+  umbrella header "Pods-MVCStoreTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
