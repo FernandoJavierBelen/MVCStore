@@ -22,6 +22,8 @@ class PickupDetailCell: UITableViewCell {
     
     private lazy var imgPhoto: UIImageView = {
         let imgPhoto = UIImageView()
+        imgPhoto.layer.cornerRadius = imgWith/20
+        imgPhoto.layer.masksToBounds = true
         imgPhoto.translatesAutoresizingMaskIntoConstraints = false
         return imgPhoto
     }()

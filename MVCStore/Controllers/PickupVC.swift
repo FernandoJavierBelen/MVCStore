@@ -22,6 +22,7 @@ class PickupVC: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -69,7 +70,6 @@ class PickupVC: UIViewController {
     
     func addPropertiesView(){
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.separatorColor = .black
         self.title = "Pickups"
     }
 }
@@ -78,12 +78,13 @@ extension PickupVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PickupHomeCell", for: indexPath) as! PickupHomeCell
+        cell.selectionStyle = .none
         cell.pickup = list[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 230
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
